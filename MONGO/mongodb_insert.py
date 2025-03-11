@@ -55,4 +55,4 @@ for _, row in df.iterrows():
     }
     db.balance_logs.insert_one(balance_log)
 
-print("✅ Data successfully inserted into MongoDB!")
+print("Data successfully inserted into MongoDB!")
