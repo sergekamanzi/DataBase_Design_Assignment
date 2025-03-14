@@ -8,7 +8,7 @@ def serialize_document(document):
         document["_id"] = str(document["_id"])
     return document
 
-# 🟢 CREATE: Insert a new client with related data
+# CREATE: Insert a new client with related data
 async def create_client_with_details(data: dict):
     client_data = {
         "age": data["age"],
@@ -52,7 +52,7 @@ async def create_client_with_details(data: dict):
 
     return {"message": "Client and related data inserted successfully", "client_id": client_id}
 
-# 🔵 READ: Retrieve a client with all related data
+# READ: Retrieve a client with all related data
 async def get_client_details(client_id: str):
     client = await db.clients.find_one({"_id": ObjectId(client_id)})
     contact = await db.contacts.find_one({"client_id": client_id})
@@ -69,7 +69,7 @@ async def get_client_details(client_id: str):
         "balance_logs": [serialize_document(log) for log in balance_logs]
     }
 
-# 🟡 UPDATE: Modify client and related data
+# UPDATE: Modify client and related data
 async def update_client(client_id: str, update_data: dict):
     client = await db.clients.find_one({"_id": ObjectId(client_id)})
     if not client:
@@ -97,7 +97,7 @@ async def update_client(client_id: str, update_data: dict):
 
     return {"message": "Client and related data updated successfully"}
 
-# 🔴 DELETE: Remove client and all related data
+# DELETE: Remove client and all related data
 async def delete_client(client_id: str):
     client = await db.clients.find_one({"_id": ObjectId(client_id)})
     if not client:
