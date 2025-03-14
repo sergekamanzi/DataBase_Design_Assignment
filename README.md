@@ -28,6 +28,10 @@ A Machine Learning-backed system that predicts whether a client will deposit in 
 
 ---
 
+## Dataset
+The dataset for this project is available on Kaggle:  
+[bank deposit](https://www.kaggle.com/datasets/neelesh0602/bankcsv/data)
+
 ## **Project Structure**  
 
 ```
