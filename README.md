@@ -138,8 +138,7 @@ def delete_client(client_id: int, db: Session = Depends(get_db)):
 
  **Clone the Repository**  
 ```bash
-git clone https://github.com/DataBase_Design_Assignment/bank-deposit-prediction.git
-cd bank-deposit-prediction
+git clone https://github.com/sergekamanzi/DataBase_Design_Assignment.git
 ```
 
  **Install Dependencies**  
