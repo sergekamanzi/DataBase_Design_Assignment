@@ -44,7 +44,6 @@ A Machine Learning-backed system that predicts whether a client will deposit in 
 ├── .gitignore                  # Git ignore file
 ├── README.md                   # Project Documentation
 ├── bank.csv                    # Dataset used for training and testing
-├── banking.ipynb                # Jupyter Notebook for ML model training
 ```
 
 
