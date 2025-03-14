@@ -55,32 +55,45 @@ We implemented **two databases**:
 ### **SQL Relational Database (MySQL)**  
 
 - **Tables:**
-  - `clients (client_id, name, age, job, balance, deposit_status)`
-  - `transactions (transaction_id, client_id, amount, type, date)`
-  - `accounts (account_id, client_id, account_type, created_at)`
+  - `clients `
+  - `contacts`
+  - `deposits`
+  - `balance_logs`
 
 - **Primary & Foreign Keys:**
-  - `client_id` in `clients` is **Primary Key**  
-  - `client_id` in `transactions` is a **Foreign Key**  
+ Primary Keys (PKs):
+clients: client_id (PK)
+contacts: contact_id (PK)
+balance_logs: log_id (PK)
+deposits: deposit_id (PK)
 
+ Foreign Keys (FKs):
+contacts: client_id → References clients(client_id)
+balance_logs: client_id → References clients(client_id)
+deposits: client_id → References clients(client_id)
 - **Stored Procedure:**  
+
   - A procedure to **automatically insert data** into the `transactions` table.  
 
-- **Trigger:**  
-  - A trigger to **log balance updates** when a transaction occurs.  
 
-### ✅ **MongoDB Schema**  
+### **MongoDB Schema**  
 
 - Collection: `bank_customers`
   ```json
   {
-    "_id": "ObjectId",
-    "name": "serge kamanzi",
-    "age": 30,
-    "job": "software Engineer",
-    "balance": 5000,
-    "deposit_status": "Yes"
-  }
+  "_id": ObjectId(),
+  "client_id": 123,
+  "features": {
+    "age": 45,
+    "job": "technician",
+    "balance": 1500,
+    "duration": 300,
+    "campaign": 2,
+    "pdays": -1,
+    "previous": 0,
+    "housing": "yes",
+    "loan": "no"
+  },
   ```
 
 ---
@@ -125,7 +138,7 @@ def delete_client(client_id: int, db: Session = Depends(get_db)):
 
  **Clone the Repository**  
 ```bash
-git clone https://github.com/yourrepo/bank-deposit-prediction.git
+git clone https://github.com/DataBase_Design_Assignment/bank-deposit-prediction.git
 cd bank-deposit-prediction
 ```
 
