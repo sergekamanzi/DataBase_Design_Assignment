@@ -31,28 +31,22 @@ A Machine Learning-backed system that predicts whether a client will deposit in 
 ## **Project Structure**  
 
 ```
-📦 Bank-Deposit-Prediction
-│── 📂 database
-│   ├── erd_diagram.png
-│   ├── sql_schema.sql
-│   ├── mongodb_schema.json
-│   ├── stored_procedures.sql
-│   ├── triggers.sql
-│── 📂 api
-│   ├── main.py  # FastAPI app
-│   ├── models.py  # SQLAlchemy ORM models
-│   ├── database.py  # DB connection
-│   ├── routes.py  # CRUD endpoints
-│── 📂 ml_model
-│   ├── model.pkl  # Trained ML model
-│   ├── predict.py  # Prediction script
-│── 📂 data
-│   ├── bank.csv  # Dataset
-│── 📜 requirements.txt
-│── 📜 README.md
+📦 Bank Deposit Prediction API
+├── 📂 Fetch_Predict            # Task 3 - Prediction script
+├── 📂 MONGO                    # MongoDB setup and scripts
+│   ├── mongodb_insert.py      # Script to insert data into MongoDB
+├── 📂 Mongo_api                # API for MongoDB operations
+│   ├── routes.py              # Routes for MongoDB-based CRUD operations
+├── 📂 SQL                      # SQL database setup
+│   ├── db                     # MySQL Database Scripts
+├── 📂 mySQL_api                # API for MySQL operations
+│   ├── api                    # MySQL CRUD operations
+├── .gitignore                  # Git ignore file
+├── README.md                   # Project Documentation
+├── bank.csv                    # Dataset used for training and testing
+├── banking.ipynb                # Jupyter Notebook for ML model training
 ```
 
----
 
 ## **Database Design**  
 
