@@ -8,7 +8,7 @@
 
 ### **Bank Deposit Prediction System**  
 
-A Machine Learning-backed system that predicts whether a client will deposit in a bank based on given features. The project involves **database design (SQL & MongoDB), CRUD API implementation (FastAPI), and a prediction script using ML**.  
+A Machine Learning-backed system that predicts whether a client will deposit in a bank based on given features. The project involves **database design (SQL & MongoDB), CRUD API implementation (FastAPI) and a prediction script using ML**.  
 
 ---
 
@@ -158,7 +158,9 @@ python ml_model/predict.py
 ##  **Contributors**  
 
  **Team Members:**  
-- Geofrey  
-- Serge  
-- Willy  
+ - Serge - Database design & implementation
+ - Willy - FastAPI CRUD API
+ - Geofrey - Data fetching & predictions
+
+
 ---
