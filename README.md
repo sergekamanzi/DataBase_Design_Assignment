@@ -35,15 +35,15 @@ The dataset for this project is available on Kaggle:
 ## **Project Structure**  
 
 ```
-📦 Bank Deposit Prediction API
-├── 📂 Fetch_Predict            # Task 3 - Prediction script
-├── 📂 MONGO                    # MongoDB setup and scripts
+ Bank Deposit Prediction API
+├──  Fetch_Predict            # Task 3 - Prediction script
+├──  MONGO                    # MongoDB setup and scripts
 │   ├── mongodb_insert.py      # Script to insert data into MongoDB
-├── 📂 Mongo_api                # API for MongoDB operations
+├──  Mongo_api                # API for MongoDB operations
 │   ├── routes.py              # Routes for MongoDB-based CRUD operations
-├── 📂 SQL                      # SQL database setup
+├──  SQL                      # SQL database setup
 │   ├── db                     # MySQL Database Scripts
-├── 📂 mySQL_api                # API for MySQL operations
+├──  mySQL_api                # API for MySQL operations
 │   ├── api                    # MySQL CRUD operations
 ├── .gitignore                  # Git ignore file
 ├── README.md                   # Project Documentation
